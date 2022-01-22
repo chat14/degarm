@@ -15,7 +15,7 @@
   <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.27.4.min.js"></script>
 
   <script>
-    const updatefile = document.getElementById('update-file');
+    const PublishFileResult = document.getElementById('PublishFileResult');
  
     const messagesTop = document.getElementById('messages-top');
     const updateText = document.getElementById('update-text');
@@ -24,6 +24,8 @@
 
     const theChannel = 'the_guide';
     const theEntry = 'Earth';
+      pubnub.publishFile
+(params: PublishFileParams): Promise<PublishFileResult>;
 
     const pubnub = new PubNub({
       // replace the key placeholders with your own PubNub publish and subscribe keys
